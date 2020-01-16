@@ -1,0 +1,20 @@
+{
+  "GBP": {
+    "name": "British Pound",
+    "symbol": "£",
+    "code": "GBP",
+    "amount": 60
+  },
+  "EUR": {
+    "name": "Euro",
+    "symbol": "€",
+    "code": "EUR",
+    "amount": 21.03
+  },
+  "USD": {
+    "name": "American Dollar",
+    "symbol": "$",
+    "code": "USD",
+    "amount": 0
+  }
+}
