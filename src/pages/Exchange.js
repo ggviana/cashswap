@@ -49,38 +49,56 @@ export default function Exchange () {
               <CurrencyInput
                 currentCurrency={balances[from]}
                 value={input}
-                onValueChange={value => {
-                  if (typeof value === 'string') {
+                onValueChange={input => {
+                  if (typeof input === 'string') {
                     clearInputs()
                   } else {
-                    setInput(value)
-                    setOutput(formatNumber(rate * value))
+                    setInput(input)
+                    setOutput(formatNumber(rate * input))
                   }
                 }}
-                onCurrencySelect={setFrom}
+                onCurrencySelect={code => {
+                  setFrom(code)
+                  BalanceService
+                    .getRate({ from: code, to })
+                    .then(rate => {
+                      setOutput(formatNumber(rate * input))
+                    })
+                }}
                 currencies={balances}
                 other={to}
               />
 
               <CurrencySwap
                 onSwap={() => {
-                  clearInputs()
                   toggle()
+                  BalanceService
+                    .getRate({ from: to, to: from })
+                    .then(rate => {
+                      setOutput(formatNumber(rate * input))
+                    })
                 }}
               />
 
               <CurrencyInput
                 currentCurrency={balances[to]}
                 value={output}
-                onValueChange={value => {
-                  if (typeof value === 'string') {
+                onValueChange={output => {
+                  if (typeof output === 'string') {
                     clearInputs()
                   } else {
-                    setOutput(value)
-                    setInput(formatNumber(value / rate))
+                    setOutput(output)
+                    setInput(formatNumber(output / rate))
                   }
                 }}
-                onCurrencySelect={setTo}
+                onCurrencySelect={code => {
+                  setTo(code)
+                  BalanceService
+                    .getRate({ from, to: code })
+                    .then(rate => {
+                      setInput(formatNumber(output / rate))
+                    })
+                }}
                 currencies={balances}
                 other={from}
               />
