@@ -12,7 +12,7 @@ function App () {
     <>
       <GlobalStyles />
       <BalanceContext.Provider value={balances}>
-        <Router>
+        <Router basename='/cashswap'>
           <Header />
           <Exchange />
           <Dashboard />
