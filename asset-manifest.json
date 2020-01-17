@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/cashswap/static/js/main.8b9b1316.chunk.js",
-    "main.js.map": "/cashswap/static/js/main.8b9b1316.chunk.js.map",
+    "main.js": "/cashswap/static/js/main.96489b03.chunk.js",
+    "main.js.map": "/cashswap/static/js/main.96489b03.chunk.js.map",
     "runtime-main.js": "/cashswap/static/js/runtime-main.3da114c7.js",
     "runtime-main.js.map": "/cashswap/static/js/runtime-main.3da114c7.js.map",
     "static/css/2.8a22d9f7.chunk.css": "/cashswap/static/css/2.8a22d9f7.chunk.css",
     "static/js/2.58f9cf59.chunk.js": "/cashswap/static/js/2.58f9cf59.chunk.js",
     "static/js/2.58f9cf59.chunk.js.map": "/cashswap/static/js/2.58f9cf59.chunk.js.map",
     "index.html": "/cashswap/index.html",
-    "precache-manifest.8896520cdb663adf2859e7463408d75a.js": "/cashswap/precache-manifest.8896520cdb663adf2859e7463408d75a.js",
+    "precache-manifest.ba3002a0b4903b268cec133f8f8c7231.js": "/cashswap/precache-manifest.ba3002a0b4903b268cec133f8f8c7231.js",
     "service-worker.js": "/cashswap/service-worker.js",
     "static/css/2.8a22d9f7.chunk.css.map": "/cashswap/static/css/2.8a22d9f7.chunk.css.map",
     "static/js/2.58f9cf59.chunk.js.LICENSE": "/cashswap/static/js/2.58f9cf59.chunk.js.LICENSE",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.3da114c7.js",
     "static/css/2.8a22d9f7.chunk.css",
     "static/js/2.58f9cf59.chunk.js",
-    "static/js/main.8b9b1316.chunk.js"
+    "static/js/main.96489b03.chunk.js"
   ]
 }

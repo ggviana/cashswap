@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9fa3820a55e723ea0097217b6ad59ed8",
+    "revision": "debdc130e8e1442d1d568c94fa921f74",
     "url": "/cashswap/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cashswap/static/js/2.58f9cf59.chunk.js.LICENSE"
   },
   {
-    "revision": "c89d310092a643531f7f",
-    "url": "/cashswap/static/js/main.8b9b1316.chunk.js"
+    "revision": "6670bba584e96bdd8a1b",
+    "url": "/cashswap/static/js/main.96489b03.chunk.js"
   },
   {
     "revision": "e2bdb714b671a6dd4856",
