@@ -27,6 +27,9 @@ export default class BalanceService {
     this.balances[from].amount -= amount
     this.balances[to].amount += amount * rate
     saveOnStorage(this.balances)
+
+    // Simulating a small server delay
+    await new Promise(resolve => window.setTimeout(resolve, 2000))
   }
 
   async getRate ({ from, to }) {
