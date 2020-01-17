@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Route } from 'react-router-dom'
+import { SlideTransition } from 'components'
 
 const StyledPage = styled.div`
   display: flex;
@@ -16,11 +17,13 @@ const StyledPage = styled.div`
 export default function Page ({ children, path, exact = false, render }) {
   return (
     <Route
-      path={path} exact={exact} render={(...args) => (
+      path={path} exact={exact} render={props => (
         <StyledPage>
-          <main>
-            {typeof render === 'function' ? render(...args) : children}
-          </main>
+          <SlideTransition type={props.match.path === '/' ? 'SlideOut' : 'SlideIn'}>
+            <main>
+              {typeof render === 'function' ? render(props) : children}
+            </main>
+          </SlideTransition>
         </StyledPage>
       )}
     />

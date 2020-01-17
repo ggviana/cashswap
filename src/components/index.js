@@ -7,6 +7,7 @@ import CurrencySwap from './CurrencySwap'
 import ExchangeRate from './ExchangeRate'
 import Header from './Header'
 import Page from './Page'
+import SlideTransition from './SlideTransition'
 
 export {
   Balances,
@@ -17,5 +18,6 @@ export {
   CurrencySwap,
   ExchangeRate,
   Header,
-  Page
+  Page,
+  SlideTransition
 }
