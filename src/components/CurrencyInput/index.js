@@ -62,6 +62,7 @@ export default function CurrencyInput ({ currentCurrency, value, onValueChange, 
           onChange={onValueChange}
           placeholder='0.00'
           min={0}
+          formatter={value => value.replace(/(^.*?\.\d{2}).*?$/, '$1')}
           onKeyPress={e => {
             const charCode = e.which ? e.which : e.keyCode
 
