@@ -4,7 +4,7 @@ import { Card, Container, CurrencyInput, CurrencySwap, ExchangeRate, Page } from
 import { useBalances, useExchangeRate, useSwitchCurrencies } from 'hooks'
 import BalanceService from 'services/Balance'
 import formatNumber from 'util/formatNumber'
-import { Button, Icon, Row, Spin } from 'antd'
+import { Button, Icon, Row, Spin, notification } from 'antd'
 
 export default function Exchange () {
   const [balances, isLoadingBalances, refreshBalances] = useBalances()
@@ -26,6 +26,12 @@ export default function Exchange () {
       setSubmitting(true)
       BalanceService
         .exchange({ from, to, amount: input })
+        .then(() => {
+          notification.success({
+            message: 'Swap completed!',
+            description: `You successfully exchanged ${balances[from].symbol}${formatNumber(input)} into ${balances[to].symbol}${formatNumber(output)}`
+          })
+        })
         .then(refreshBalances)
         .then(clearInputs)
         .finally(() => setSubmitting(false))
