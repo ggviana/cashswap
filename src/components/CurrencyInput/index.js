@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import formatNumber from 'util/formatNumber'
-import { CurrencySelector } from 'components'
+import { CurrencySelector, LinkButton } from 'components'
 import { color } from 'theme'
 import InputNumber from 'rc-input-number'
 
@@ -41,6 +41,9 @@ const StyledCurrencyInput = styled.div`
 `
 
 export default function CurrencyInput ({ currentCurrency, value, onValueChange, onCurrencySelect, type, currencies, other }) {
+  const formattedBalance = formatNumber(currentCurrency.amount)
+  const maxBalance = parseFloat(formattedBalance)
+
   return (
     <StyledCurrencyInput>
       <div className='flex'>
@@ -48,7 +51,9 @@ export default function CurrencyInput ({ currentCurrency, value, onValueChange, 
           {currentCurrency.name}
         </div>
         <div>
-          Balance: {formatNumber(currentCurrency.amount)}<br />
+          <LinkButton onClick={() => onValueChange(maxBalance)} disabled={maxBalance === 0}>
+            Balance: {formattedBalance}<br />
+          </LinkButton>
         </div>
       </div>
       <div className='flex'>

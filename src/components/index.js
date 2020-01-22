@@ -6,6 +6,7 @@ import CurrencySelector from './CurrencySelector'
 import CurrencySwap from './CurrencySwap'
 import ExchangeRate from './ExchangeRate'
 import Header from './Header'
+import LinkButton from './LinkButton'
 import Page from './Page'
 import SlideTransition from './SlideTransition'
 
@@ -18,6 +19,7 @@ export {
   CurrencySwap,
   ExchangeRate,
   Header,
+  LinkButton,
   Page,
   SlideTransition
 }

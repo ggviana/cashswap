@@ -7,6 +7,11 @@ const StyledSpan = styled.span`
   font-size: 24px;
   text-align: center;
   padding: 5px 0;
+  transition: 200ms;
+  
+  &:hover {
+    color: black;
+  }
 `
 
 export default function CurrencySwap ({ onSwap }) {
