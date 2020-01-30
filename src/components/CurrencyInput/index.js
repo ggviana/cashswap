@@ -58,6 +58,7 @@ export default function CurrencyInput ({ currentCurrency, value, onValueChange, 
       </div>
       <div className='flex'>
         <InputNumber
+          type='number'
           value={value}
           onChange={onValueChange}
           placeholder='0.00'
