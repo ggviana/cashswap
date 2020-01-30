@@ -5,6 +5,8 @@ import { Dashboard, Exchange } from 'pages'
 import { Header } from 'components'
 import { BalanceContext, useBalanceProvider } from 'hooks/useBalances'
 
+const basename = process.env.NODE_ENV === 'development' ? '/' : '/cashswap'
+
 function App () {
   const balances = useBalanceProvider()
 
@@ -12,7 +14,7 @@ function App () {
     <>
       <GlobalStyles />
       <BalanceContext.Provider value={balances}>
-        <Router basename='/cashswap'>
+        <Router basename={basename}>
           <Header />
           <Exchange />
           <Dashboard />
